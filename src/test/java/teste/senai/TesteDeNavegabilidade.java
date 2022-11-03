@@ -26,6 +26,7 @@ public class TesteDeNavegabilidade {
 	@Test
 	public void teste() {
 		driver.findElement(By.id("Busca_txtFiltro")).sendKeys("Excel");
+		driver.findElement(By.id("Busca_txtFiltro")).sendKeys(Keys.ENTER);
 		driver.findElement(By.id("Buscal_btnBusca")).click();
 		
 	}
@@ -33,6 +34,7 @@ public class TesteDeNavegabilidade {
 	//pós-teste
 	@After
 	public void PosTeste() {
+		driver.quit();
 		
 	}
 
